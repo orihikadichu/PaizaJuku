@@ -12,7 +12,8 @@
 */
 
 Route::group(['prefix' => 'admin'], function() {
-    Route::get('paiza/create', 'Admin\PaizaController@add')->middleware('auth');;
+    Route::get('quiz/create', 'Admin\QuizController@add')->middleware('auth');;
+    Route::post('quiz/create', 'Admin\QuizController@create')->middleware('auth');;
 });
 
 Auth::routes();
